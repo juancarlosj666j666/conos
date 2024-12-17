@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conos Trufados - Sabor Inolvidable</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<a href="https://wa.me/59168057961" target="_blank" class="whatsapp-float">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+<body>
+    <section id="banner" class="banner">
+        <div class="banner-content">
+            <p>🎉 <strong>Oferta:</strong> Compra  conos <strong>ESPECIALES</strong>. ✨ <em>Solo por hoy!</em></p>
+        </div>
+    </section>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="imagenes/logo.png" alt="Logo de Conos Trufados" class="logo">
+            <h1 class="site-title">Conos Trufados</h1>
+        </div>
+        <p class="subtitle">Dulzura en cada mordida 🍰</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#about">Nosotros</a>
+        <a href="#products">Productos</a>
+        <a href="#register">Registro</a>
+        <a href="#comments">Comentarios</a>
+        <a href="#cart">Carrito</a>
+        <a href="#orders">Compras</a>
+        <a href="#users">Usuarios</a>
+        
+        <!-- Selector de tipo de productos -->
+        <select id="product-type" onchange="filterProductsByType()">
+            <option value="">Selecciona un tipo</option>
+            <option value="cumpleaños">Cono de cumpleaños</option>
+            <option value="boda">Cono de boda</option>
+            <option value="personalizado">Cono personalizado</option>
+        </select>
+    </nav>
+
+    <main>
+        <section id="about" class="content about">
+            <h2>¿Quiénes somos?</h2>
+            <p>En <strong>Conos Trufados</strong>, creamos dulces recuerdos con nuestros conos elaborados con los mejores ingredientes. 🍇🍰🍒</p>
+            <img src="imagenes/banner1.png" alt="Conos Trufados" class="about-image">
+        </section>
+        <section id="products" class="content products">
+            <h2>Nuestros Productos</h2>
+        
+            <!-- Sección Conos de Cumpleaños -->
+            <div class="product-category">
+                <h3>Conos de Cumpleaños</h3>
+                <div class="product-list">
+                    <div class="product-card" data-name="Cono de cumpleaños🍓">
+                        <img src="imagenes/cumple1.png" alt="Cono de cumpleaños">
+                        <h3>Cono de cumpleaños🍓</h3>
+                        <p>Intenso y cremoso, ideal para amantes del 🍓.</p>
+                        <button onclick="addToCart('Cono de cumpleaños🍓')">🍦 Comprar</button>
+                    </div>
+                    <div class="product-card" data-name="Cono de cumpleaños🍪">
+                        <img src="imagenes/cumple2.png" alt="Cono de cumpleaños">
+                        <h3>Cono de cumpleaños🍪</h3>
+                        <p>Intenso y cremoso, ideal para amantes de la 🍪.</p>
+                        <button onclick="addToCart('Cono de cumpleaños🍪')">🍦 Comprar</button>
+                    </div>
+                    <div class="product-card" data-name="Cono de cumpleaños🥥">
+                        <img src="imagenes/cumple6.png" alt="Cono de cumpleaños">
+                        <h3>Cono de cumpleaños🥥</h3>
+                        <p>Intenso, ideal para amantes del 🥥.</p>
+                        <button onclick="addToCart('Cono de cumpleaños🥥')">🍦 Comprar</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Sección Conos de Boda -->
+            <div class="product-category">
+                <h3>Conos de Boda</h3>
+                <div class="product-list">
+                    <div class="product-card" data-name="Cono de boda 🥛">
+                        <img src="imagenes/boda1.png" alt="Cono de boda">
+                        <h3>Cono de boda🥛</h3>
+                        <p>Refrescante con crema de leche 🥛</p>
+                        <button onclick="addToCart('Cono de boda 🥛')">🍦 Comprar</button>
+                    </div>
+                    <div class="product-card" data-name="Cono de boda 💖">
+                        <img src="imagenes/boda2.png" alt="Cono de boda">
+                        <h3>Cono de boda con dedicatoria💖</h3>
+                        <p>Refrescante con crema y dedicatoria 💖</p>
+                        <button onclick="addToCart('Cono de boda 💖')">🍦 Comprar</button>
+                    </div>
+                    <div class="product-card" data-name="Cono de boda 😘✨">
+                        <img src="imagenes/boda5.png" alt="Cono de boda">
+                        <h3>Cono de boda con dedicatoria2😘✨</h3>
+                        <p>Refrescante con crema y dedicatoria2 😘✨</p>
+                        <button onclick="addToCart('Cono de boda 😘✨')">🍦 Comprar</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Sección Conos Personalizados -->
+            <div class="product-category">
+                <h3>Conos Personalizados</h3>
+                <div class="product-list">
+                    <div class="product-card" data-name="Cono personalizado😋">
+                        <img src="imagenes/per1.png" alt="Cono personalizado">
+                        <h3>Cono personalizado1😋</h3>
+                        <p>Refrescante personalizado1😋</p>
+                        <button onclick="addToCart('Cono personalizado😋')">🍦 Comprar</button>
+                    </div>
+                    <div class="product-card" data-name="Cono personalizado😲">
+                        <img src="imagenes/per2.png" alt="Cono personalizado">
+                        <h3>Cono personalizado2😲</h3>
+                        <p>Refrescante personalizado2😲</p>
+                        <button onclick="addToCart('Cono personalizado😲')">🍦 Comprar</button>
+                    </div>
+                    <div class="product-card" data-name="Cono personalizado😎">
+                        <img src="imagenes/per3.png" alt="Cono personalizado">
+                        <h3>Cono personalizado3😎</h3>
+                        <p>Refrescante personalizado3😎</p>
+                        <button onclick="addToCart('Cono personalizado😎')">🍦 Comprar</button>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+        
+
+        <section id="register" class="content form-container">
+            <h2>Registro de Usuarios 👤</h2>
+            <img src="imagenes/banner2.png" alt="Registro de Usuarios" class="form-image">
+            <form id="register-form">
+                <input type="text" placeholder="Nombre 👤" id="name" required>
+                <input type="email" placeholder="Correo Electrónico 📧 " id="email" required>
+                <input type="password" placeholder="Contraseña 🔑 " id="password" required>
+                <input type="tel" placeholder="Teléfono 📞" id="phone" required>
+                <input type="text" placeholder="Dirección 🏠" id="address" required>
+                <button type="submit">✔ Registrarse</button>
+            </form>
+        </section>
+
+        <section id="users" class="content">
+            <h2>Usuarios Registrados 👤</h2>
+            <ul id="user-list">
+                <li>Aún no hay usuarios registrados  👤</li>
+            </ul>
+        </section>
+
+        <section id="cart" class="content cart">
+            <h2>Carrito de Compras 🛒</h2>
+            <ul id="cart-items">
+                <li>Tu carrito está vacío. ☑¡Comienza a comprar!</li>
+            </ul>
+            <p id="cart-preview">Total de artículos: 0</p>
+            <p id="cart-total">Total: Bs 0.00</p>
+            <button id="checkout-button" onclick="checkout()">⚖ Finalizar Compra</button>
+        </section>
+
+        <section id="orders" class="content">
+            <h2>Historial de Compras  🛒</h2>
+            <ul id="order-list">
+                <li>No hay compras realizadas aún 🛒</li>
+            </ul>
+        </section>
+
+        <section id="comments" class="content">
+            <h2>Comentarios 🖊️</h2>
+           <!-- <img src="imagenes/banner3.png" alt="Comentarios" class="comments-image">-->
+            <form id="comment-form">
+                <input type="text" placeholder="Tu Nombre" id="comment-name" required>
+                <textarea placeholder="Escribe tu comentario" id="comment-text" rows="4" required></textarea>
+                <button type="submit">✉ Enviar Comentario</button>
+            </form>
+            <ul id="comment-list">
+                <li>No hay comentarios aún  🖊️</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 <strong>Conos Trufados</strong>. Todos los derechos reservados JA😊. 🌈</p>
+        <div style="text-align:center; padding:20px; background-color:#333; color:white;">
+            <p>Contáctanos al: <strong><a href="tel:+59168057961" style="color: #4CAF50;">68057961</a></strong></p>
+            <p>O escríbenos por <a href="https://wa.me/59168057961" target="_blank" style="color: #25D366;">WhatsApp</a></p>
+        </div>
+    </footer>
+</body>
+</html>
